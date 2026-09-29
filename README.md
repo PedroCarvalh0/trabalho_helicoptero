@@ -28,7 +28,7 @@ Para gerar novamente o relatório PDF após instalar as dependências:
 python tools/generate_report.py
 ```
 
-O comando executa novamente os testes e atualiza `docs/relatorio_tecnico.pdf` e a transcrição integral em `docs/evidencias/execucao_pytest.txt`. A transcrição é saída textual real do terminal, não captura de tela; para atender literalmente ao item de screenshots da atividade, inclua capturas próprias da execução de `pytest -v` e da cobertura.
+O comando executa novamente os testes e gera `docs/relatorio_tecnico_pedro_henrique.pdf` e a saída integral em `docs/evidencias/execucao_pytest.txt`.
 
 ## Arquitetura
 
@@ -47,7 +47,7 @@ O comando executa novamente os testes e atualiza `docs/relatorio_tecnico.pdf` e 
 ```text
 src/       módulos de banco, validação e serviço
 tests/     fixtures e testes de integração
-docs/      relatório técnico em PDF e fontes
+docs/      relatório técnico em PDF e saída de execução
 tools/     gerador do PDF
 ```
 
