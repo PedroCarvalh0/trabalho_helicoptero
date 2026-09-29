@@ -1,0 +1,28 @@
+$ C:\Users\Pedro\AppData\Local\Python\pythoncore-3.14-64\python.exe -m pytest -v --cov=src --cov-report=term-missing
+
+============================= test session starts =============================
+platform win32 -- Python 3.14.7, pytest-9.1.1, pluggy-1.6.0 -- C:\Users\Pedro\AppData\Local\Python\pythoncore-3.14-64\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Pedro\Documents\escola\QA\trabalho_aviao
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-7.1.0
+collecting ... collected 5 items
+
+tests/test_flight_integration.py::test_valid_booking_is_persisted_as_scheduled PASSED [ 20%]
+tests/test_flight_integration.py::test_overlapping_aircraft_booking_is_rejected_without_insert PASSED [ 40%]
+tests/test_flight_integration.py::test_aircraft_under_inspection_is_rejected_without_database_change PASSED [ 60%]
+tests/test_flight_integration.py::test_each_test_starts_with_an_isolated_empty_database PASSED [ 80%]
+tests/test_flight_integration.py::test_weight_over_capacity_is_rejected_without_insert PASSED [100%]
+
+=============================== tests coverage ================================
+_______________ coverage: platform win32, python 3.14.7-final-0 _______________
+
+Name                     Stmts   Miss  Cover   Missing
+------------------------------------------------------
+src\booking_service.py      32      5    84%   24, 39, 46, 67-68
+src\database.py             53      2    96%   93-94
+src\validation.py            9      1    89%   12
+------------------------------------------------------
+TOTAL                       94      8    91%
+============================== 5 passed in 0.21s ==============================
